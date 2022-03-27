@@ -64,7 +64,11 @@ DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/base-filte
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/chinese-filter.txt,🛑 广告拦截 
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/neohosts-full.txt,🛑 广告拦截 
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/social-media-filter.txt,🛑 广告拦截 
-RULE-SET,{{ getDownloadUrl('myproxy.list') }},🚀 Proxy
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_proxy.list,🚀 Proxy
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_direct.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_api.list,🍎 Apple
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_cdn.list,🍎 Apple CDN
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_icloud.list,🍎 Apple iCloud
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list,✈️ Telegram
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Microsoft.list,Ⓜ️ 微软服务
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/adobecc.list,☠️ AdobeCrack
