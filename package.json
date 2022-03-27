@@ -1,0 +1,14 @@
+{
+  "name": "my-rule-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "update": "surgio generate && surgio upload"
+  },
+  "engines": {
+    "node": "^12"
+  },
+  "dependencies": {
+    "surgio": "2.16.0"
+  }
+}
