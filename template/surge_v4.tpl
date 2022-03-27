@@ -42,6 +42,7 @@ show-error-page-for-reject = true
 🚀 Proxy = select, ♻️ 自动切换, {{ getNodeNames(nodeList) }}
 🍎 Apple = select, DIRECT, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
 🍎 Apple CDN = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
+🍎 Apple iCloud = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 🛑 广告拦截 = select, REJECT, DIRECT, ♻️ 自动切换
 ✈️ Telegram = select, ♻️ 自动切换, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
 🎬 Netflix = select, ♻️ 自动切换, 🚀 Proxy, {{ getNodeNames(nodeList, netflixFilter) }}

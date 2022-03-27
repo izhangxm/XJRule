@@ -1,4 +1,5 @@
 {% macro main(default_rule, api_rule, cdn_rule, location_rule, apple_news_rule) %}
+# {{         ('🚀 Proxy',   '🍎 Apple', '🍎 Apple CDN', 'DIRECT', 'US') }}
 # http://www.jjinc.com.au/announcements/apple170008services
 # https://gist.github.com/joseconstela/a6e06ef9737e097eddcaf940ea313e38
 #
@@ -151,6 +152,8 @@ DOMAIN-SUFFIX,itunes.com,{{ api_rule }}
 DOMAIN-SUFFIX,itunes.apple.com,{{ api_rule }}
 DOMAIN-SUFFIX,apple,{{ api_rule }}
 DOMAIN,weather-analytics-events.apple.com,{{ api_rule }}
+
+
 # iCloud 上传和下载
 DOMAIN-SUFFIX,icloud-content.com,{{ api_rule }}
 DOMAIN-SUFFIX,me.com,{{ api_rule }}
