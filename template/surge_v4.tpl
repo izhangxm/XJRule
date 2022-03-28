@@ -47,6 +47,7 @@ show-error-page-for-reject = true
 🍎 Apple iCloud = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 🛑 广告拦截 = select, REJECT, DIRECT, ♻️ 自动切换
 ✈️ Telegram = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
+📞 Zoom = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 🎬 Netflix = select, 🚀 Proxy, ♻️ 自动切换, {{ getNodeNames(nodeList, netflixFilter) }}
 📺 YouTube = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 👾 机场专线 = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
@@ -58,20 +59,21 @@ show-error-page-for-reject = true
 🐟 Final = select, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK, ♻️ 自动切换, DIRECT, REJECT
 
 [Rule]
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/adaway.txt,🛑 广告拦截 
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/annoyances-filter.txt,🛑 广告拦截 
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/base-filter.txt,🛑 广告拦截 
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/chinese-filter.txt,🛑 广告拦截 
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/neohosts-full.txt,🛑 广告拦截 
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/social-media-filter.txt,🛑 广告拦截 
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_proxy.list,🚀 Proxy
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_direct.list,DIRECT
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/adaway.txt,🛑 广告拦截
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/annoyances-filter.txt,🛑 广告拦截
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/base-filter.txt,🛑 广告拦截
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/chinese-filter.txt,🛑 广告拦截
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/neohosts-full.txt,🛑 广告拦截
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/social-media-filter.txt,🛑 广告拦截
+RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/adobecc.list,☠️ AdobeCrack
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_api.list,🍎 Apple
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_cdn.list,🍎 Apple CDN
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_icloud.list,🍎 Apple iCloud
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/zoom.list,📞 Zoom
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list,✈️ Telegram
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Microsoft.list,Ⓜ️ 微软服务
-RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/adobecc.list,☠️ AdobeCrack
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Googleanalytics.list,🤖 谷歌分析
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list,👾 机场专线 
 RULE-SET,https://raw.githubusercontent.com/geekdada/surge-list/master/youtube.list,📺 YouTube
