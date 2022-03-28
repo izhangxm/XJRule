@@ -46,16 +46,6 @@ module.exports = {
   },
   artifacts: [
     {
-      name: 'surge_suwayun.conf',
-      template: 'surge_v4',
-      provider: 'suwayun',
-    },
-    {
-      name: 'surge_v4.conf',
-      template: 'surge_v4',
-      provider: 'subscribe_miaona',
-    },
-    {
       name: 'surge_paolu_v4.conf',
       template: 'surge_v4',
       provider: 'subscribe_paoluz',
@@ -64,6 +54,11 @@ module.exports = {
       name: 'quan_x_paolu_v4.conf',
       template: 'quan_x',
       provider: 'subscribe_paoluz',
+    },
+    {
+      name: 'surge_v4.conf',
+      template: 'surge_v4',
+      provider: 'subscribe_miaona',
     },
     /**
      * Clash

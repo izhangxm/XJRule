@@ -52,36 +52,30 @@ show-error-page-for-reject = true
 📺 YouTube = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 👾 机场专线 = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 Ⓜ️ 微软服务 = select, DIRECT, ♻️ 自动切换, 🚀 Proxy
-☠️ AdobeCrack = select, REJECT, DIRECT, ♻️ 自动切换, 🚀 Proxy
 🤖 谷歌分析 = select, 🚀 Proxy, ♻️ 自动切换, DIRECT
 📲 社交媒体 = select, 🚀 Proxy, ♻️ 自动切换, DIRECT
 🎥 其他国外流媒体 = select, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK, ♻️ 自动切换,  {{ getNodeNames(nodeList) }}
-🐟 Final = select, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK, ♻️ 自动切换, DIRECT, REJECT
+🐟 Final = select, DIRECT, REJECT, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_proxy.list,🚀 Proxy
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_direct.list,DIRECT
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/adaway.txt,🛑 广告拦截
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/annoyances-filter.txt,🛑 广告拦截
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/base-filter.txt,🛑 广告拦截
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/chinese-filter.txt,🛑 广告拦截
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/neohosts-full.txt,🛑 广告拦截
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/social-media-filter.txt,🛑 广告拦截
-RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/adobecc.list,☠️ AdobeCrack
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_proxy.list,🚀 Proxy // 个人维护代理
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_direct.list,DIRECT // 个人维护直连
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/private.txt,DIRECT // 私有网络专用域名列表
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt,🛑 广告拦截 // 广告域名列表
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_api.list,🍎 Apple
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_cdn.list,🍎 Apple CDN
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_icloud.list,🍎 Apple iCloud
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/apple.txt,🍎 Apple CDN
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/icloud.txt,🍎 Apple iCloud
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/zoom.list,📞 Zoom
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list,✈️ Telegram
+RULE-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/telegramcidr.txt,✈️ Telegram
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Microsoft.list,Ⓜ️ 微软服务
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Googleanalytics.list,🤖 谷歌分析
-RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list,👾 机场专线 
+RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list,👾 机场专线
 RULE-SET,https://raw.githubusercontent.com/geekdada/surge-list/master/youtube.list,📺 YouTube
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,📲 社交媒体
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,🎥 其他国外流媒体
 RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list,🎬 Netflix
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Quantumult/Filter/China.list,DIRECT
-RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Local.list,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/gfw.txt ,🚀 Proxy  // GFWList域名列表
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/proxy.txt,🚀 Proxy // 收集的代理名单
 RULE-SET,SYSTEM,DIRECT
 RULE-SET,LAN,DIRECT
 GEOIP,CN,DIRECT
