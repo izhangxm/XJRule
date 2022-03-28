@@ -42,10 +42,10 @@ show-error-page-for-reject = true
 🇺🇸 US = url-test, {{ getNodeNames(nodeList, usFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
 🇭🇰 HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
 🚀 Proxy = select, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK, {{ getNodeNames(nodeList) }}
+🛑 广告拦截 = select, REJECT, DIRECT, ♻️ 自动切换
 🍎 Apple = select, DIRECT, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
 🍎 Apple CDN = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 🍎 Apple iCloud = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
-🛑 广告拦截 = select, REJECT, DIRECT, ♻️ 自动切换
 ✈️ Telegram = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 📞 Zoom = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 🎬 Netflix = select, 🚀 Proxy, ♻️ 自动切换, {{ getNodeNames(nodeList, netflixFilter) }}
