@@ -38,24 +38,24 @@ show-error-page-for-reject = true
 {{ getSurgeNodes(nodeList) }}
 
 [Proxy Group]
-♻️ 自动切换 = url-test, {{ getNodeNames(nodeList) }}, url = {{ proxyTestUrl }}, interval = 300
-🚀 Proxy = select, ♻️ 自动切换, {{ getNodeNames(nodeList) }}
+♻️ 自动切换 = url-test, {{ getNodeNames(nodeList) }}, url = {{ proxyTestUrl }}, interval = 1200
+🇺🇸 US = url-test, {{ getNodeNames(nodeList, usFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
+🇭🇰 HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
+🚀 Proxy = select, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK, {{ getNodeNames(nodeList) }}
 🍎 Apple = select, DIRECT, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
 🍎 Apple CDN = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 🍎 Apple iCloud = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 🛑 广告拦截 = select, REJECT, DIRECT, ♻️ 自动切换
-✈️ Telegram = select, ♻️ 自动切换, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
-🎬 Netflix = select, ♻️ 自动切换, 🚀 Proxy, {{ getNodeNames(nodeList, netflixFilter) }}
-📺 YouTube = select, ♻️ 自动切换, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
-👾 机场专线 = select, ♻️ 自动切换, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
+✈️ Telegram = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
+🎬 Netflix = select, 🚀 Proxy, ♻️ 自动切换, {{ getNodeNames(nodeList, netflixFilter) }}
+📺 YouTube = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
+👾 机场专线 = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 Ⓜ️ 微软服务 = select, DIRECT, ♻️ 自动切换, 🚀 Proxy
 ☠️ AdobeCrack = select, REJECT, DIRECT, ♻️ 自动切换, 🚀 Proxy
-🤖 谷歌分析 = select, ♻️ 自动切换, DIRECT, 🚀 Proxy
-📲 社交媒体 = select, ♻️ 自动切换, DIRECT,🚀 Proxy
-🎥 其他国外流媒体 = select, ♻️ 自动切换,  {{ getNodeNames(nodeList) }}
-🇺🇸 US = url-test, {{ getNodeNames(nodeList, usFilter) }}, url = {{ proxyTestUrl }}, interval = 300
-🇭🇰 HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, url = {{ proxyTestUrl }}, interval = 300
-🐟 Final = select, ♻️ 自动切换, DIRECT, REJECT, 🚀 Proxy
+🤖 谷歌分析 = select, 🚀 Proxy, ♻️ 自动切换, DIRECT
+📲 社交媒体 = select, 🚀 Proxy, ♻️ 自动切换, DIRECT
+🎥 其他国外流媒体 = select, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK, ♻️ 自动切换,  {{ getNodeNames(nodeList) }}
+🐟 Final = select, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK, ♻️ 自动切换, DIRECT, REJECT
 
 [Rule]
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/geekdada/surge-list/domain-set/adaway.txt,🛑 广告拦截 

@@ -11,11 +11,11 @@ module.exports = {
    * 文档：https://surgio.js.org/guide/custom-config.html#remotesnippets
    */
   remoteSnippets: [
-    {
-      name: 'apple', // 模板中对应 remoteSnippets.apple
-      url: 'https://raw.githubusercontent.com/geekdada/surge-list/master/surgio-snippet/apple.tpl',
-      surgioSnippet: true
-    },
+    // {
+    //   name: 'apple', // 模板中对应 remoteSnippets.apple
+    //   url: 'https://raw.githubusercontent.com/geekdada/surge-list/master/surgio-snippet/apple.tpl',
+    //   surgioSnippet: true
+    // },
     // {
     //   name: 'telegram', // 模板中对应 remoteSnippets.telegram
     //   url: 'https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Telegram/Telegram.list'
@@ -45,21 +45,23 @@ module.exports = {
     hktFilter: utils.useKeywords(['hkt', 'HKT']),
   },
   artifacts: [
-    /**
-     * Surge
-     */
     {
-      name: 'surge_v4.conf', // 新版 Surge
+      name: 'surge_suwayun.conf',
+      template: 'surge_v4',
+      provider: 'suwayun',
+    },
+    {
+      name: 'surge_v4.conf',
       template: 'surge_v4',
       provider: 'subscribe_miaona',
     },
     {
-      name: 'surge_paolu_v4.conf', // 新版 Surge
+      name: 'surge_paolu_v4.conf',
       template: 'surge_v4',
       provider: 'subscribe_paoluz',
     },
     {
-      name: 'quan_x_paolu_v4.conf', // 新版 Surge
+      name: 'quan_x_paolu_v4.conf',
       template: 'quan_x',
       provider: 'subscribe_paoluz',
     },
