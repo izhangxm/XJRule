@@ -47,6 +47,10 @@ DOMAIN,news-events.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,apple.comscoreresearch.com
 
+# apple tv
+DOMAIN,daf.xp.apple.com
+DOMAIN-SUFFIX,tv.apple.com
+
 #
 # Apple 其他自选
 #
