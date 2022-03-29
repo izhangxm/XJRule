@@ -1,4 +1,4 @@
-#!MANAGED-CONFIG {{ downloadUrl }} interval=43200 strict=false
+#!MANAGED-CONFIG {{ downloadUrl }} interval={{ customParams.conf_inv }} strict=false
 
 [General]
 # 日志等级: warning, notify, info, verbose (默认值: notify)
@@ -38,9 +38,9 @@ show-error-page-for-reject = true
 {{ getSurgeNodes(nodeList) }}
 
 [Proxy Group]
-♻️ 自动切换 = url-test, {{ getNodeNames(nodeList) }}, url = {{ proxyTestUrl }}, interval = 1200
-🇺🇸 US = url-test, {{ getNodeNames(nodeList, usFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
-🇭🇰 HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
+♻️ 自动切换 = url-test, {{ getNodeNames(nodeList) }}, url = {{ proxyTestUrl }}, interval = {{ customParams.test_inv }}
+🇺🇸 US = url-test, {{ getNodeNames(nodeList, usFilter) }}, url = {{ proxyTestUrl }}, interval = {{ customParams.test_inv }}
+🇭🇰 HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, url = {{ proxyTestUrl }}, interval = {{ customParams.test_inv }}
 🚀 Proxy = select, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK, {{ getNodeNames(nodeList) }}
 🛑 广告拦截 = select, REJECT, DIRECT, ♻️ 自动切换
 🍎 Apple 账号 = select, DIRECT, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
@@ -60,26 +60,26 @@ show-error-page-for-reject = true
 🐟 Final = select, DIRECT, REJECT, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 
 [Rule]
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_direct.list,DIRECT // 个人维护直连
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_proxy.list,🚀 Proxy // 个人维护代理
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT // 私有网络专用域名列表
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/reject.txt,🛑 广告拦截 // 广告域名列表
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_api.list,🍎 Apple 账号
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.txt,🍎 Apple CDN
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_cdn.list,🍎 Apple CDN
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_apps.list,🍎 Apple 国外应用
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt,🍎 Apple iCloud
-RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt,✈️ Telegram
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/zoom.list,📞 Zoom
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/steam.list,🎮 Steam
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/youtube.list,📺 YouTube
-RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Microsoft.list,Ⓜ️ 微软服务
-RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Googleanalytics.list,🤖 谷歌分析
-RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles4limbo@main/airports.list,👾 机场专线
-RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Streaming.list,🎥 其他国外流媒体
-RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Video/Netflix.list,🎬 Netflix
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/gfw.txt ,🚀 Proxy  // GFWList域名列表
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt,🚀 Proxy // 收集的代理名单
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_direct.list,DIRECT,update-interval={{ customParams.resource_inv }}  // 个人维护直连
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_proxy.list,🚀 Proxy,update-interval={{ customParams.resource_inv }} // 个人维护代理
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT,update-interval={{ customParams.resource_inv }}  // 私有网络专用域名列表
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/reject.txt,🛑 广告拦截,update-interval={{ customParams.resource_inv }}  // 广告域名列表
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_api.list,🍎 Apple 账号,update-interval={{ customParams.resource_inv }} // AppleAPI所在区域，代理尽量选择所在区
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.txt,🍎 Apple CDN,update-interval={{ customParams.resource_inv }} // Apple可以直接链接的资源
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_cdn.list,🍎 Apple CDN,update-interval={{ customParams.resource_inv }} // Apple可以直接链接的资源
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_apps.list,🍎 Apple 国外应用,update-interval={{ customParams.resource_inv }} // 如AppleTV等在国内无法使用的应用
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt,🍎 Apple iCloud,update-interval={{ customParams.resource_inv }} // iCloud服务一般选择直接链接就可以
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt,✈️ Telegram,update-interval={{ customParams.resource_inv }} // Telegram
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/zoom.list,📞 Zoom,update-interval={{ customParams.resource_inv }} // zoom会议
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/steam.list,🎮 Steam,update-interval={{ customParams.resource_inv }} // Steam服务
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/youtube.list,📺 YouTube,update-interval={{ customParams.resource_inv }} // Youtube服务，方便换取
+RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Microsoft.list,Ⓜ️ 微软服务,update-interval={{ customParams.resource_inv }} // 微软服务，直接访问即可
+RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Googleanalytics.list,🤖 谷歌分析,update-interval={{ customParams.resource_inv }}  // 谷歌分析服务
+RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles4limbo@main/airports.list,👾 机场专线,update-interval={{ customParams.resource_inv }}  // 各种机场的地址
+RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Video/Netflix.list,🎬 Netflix,update-interval={{ customParams.resource_inv }}  // Netflix
+RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Streaming.list,🎥 其他国外流媒体,update-interval={{ customParams.resource_inv }} // 国外流媒体 
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/gfw.txt ,🚀 Proxy,update-interval={{ customParams.resource_inv }}   // GFWList域名列表
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt,🚀 Proxy,update-interval={{ customParams.resource_inv }}  // 收集的代理名单
 RULE-SET,SYSTEM,DIRECT
 RULE-SET,LAN,DIRECT
 GEOIP,CN,DIRECT

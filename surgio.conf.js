@@ -44,6 +44,11 @@ module.exports = {
   customFilters: {
     hktFilter: utils.useKeywords(['hkt', 'HKT']),
   },
+  customParams: {
+    conf_inv: 3600,
+    resource_inv: 3600,
+    test_inv: 600,
+  },
   artifacts: [
     {
       name: 'surge_paolu_v4.conf',
