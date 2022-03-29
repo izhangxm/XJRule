@@ -47,6 +47,7 @@ show-error-page-for-reject = true
 🍎 Apple CDN = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 🍎 Apple iCloud = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 ✈️ Telegram = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
+🎮 Steam = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 📞 Zoom = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 🎬 Netflix = select, 🚀 Proxy, ♻️ 自动切换, {{ getNodeNames(nodeList, netflixFilter) }}
 📺 YouTube = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
@@ -66,6 +67,7 @@ RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/a
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/apple.txt,🍎 Apple CDN
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/icloud.txt,🍎 Apple iCloud
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/zoom.list,📞 Zoom
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/steam.list,🎮 Steam
 RULE-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/telegramcidr.txt,✈️ Telegram
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Microsoft.list,Ⓜ️ 微软服务
 RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Googleanalytics.list,🤖 谷歌分析
