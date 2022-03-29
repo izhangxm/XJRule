@@ -43,7 +43,8 @@ show-error-page-for-reject = true
 🇭🇰 HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
 🚀 Proxy = select, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK, {{ getNodeNames(nodeList) }}
 🛑 广告拦截 = select, REJECT, DIRECT, ♻️ 自动切换
-🍎 Apple = select, DIRECT, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
+🍎 Apple 账号 = select, DIRECT, 🚀 Proxy, 🇺🇸 US, 🇭🇰 HK
+🍎 Apple 国外应用 = select, 🚀 Proxy, ♻️ 自动切换, 🍎 Apple, 🇭🇰 HK, ,🇺🇸 US, DIRECT
 🍎 Apple CDN = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 🍎 Apple iCloud = select, DIRECT, 🚀 Proxy, 🍎 Apple, 🇺🇸 US, 🇭🇰 HK
 ✈️ Telegram = select, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
@@ -63,8 +64,10 @@ RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_dire
 RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_proxy.list,🚀 Proxy // 个人维护代理
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT // 私有网络专用域名列表
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/reject.txt,🛑 广告拦截 // 广告域名列表
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_api.list,🍎 Apple
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_api.list,🍎 Apple 账号
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.txt,🍎 Apple CDN
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_cdn.list,🍎 Apple CDN
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_apps.list,🍎 Apple 国外应用
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt,🍎 Apple iCloud
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt,✈️ Telegram
 RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/zoom.list,📞 Zoom
@@ -73,7 +76,6 @@ RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/youtube
 RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Microsoft.list,Ⓜ️ 微软服务
 RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Googleanalytics.list,🤖 谷歌分析
 RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles4limbo@main/airports.list,👾 机场专线
-RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/Global.list,📲 社交媒体
 RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Streaming.list,🎥 其他国外流媒体
 RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Video/Netflix.list,🎬 Netflix
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/gfw.txt ,🚀 Proxy  // GFWList域名列表
