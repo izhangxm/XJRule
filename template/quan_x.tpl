@@ -38,9 +38,9 @@ static=☠️ AdobeCrack, REJECT, DIRECT, ♻️ 自动切换, 🚀 Proxy
 static=🤖 谷歌分析, ♻️ 自动切换, DIRECT, 🚀 Proxy
 static=📲 社交媒体, ♻️ 自动切换, DIRECT,🚀 Proxy
 static=🎥 其他国外流媒体, ♻️ 自动切换, img-url=https://raw.githubusercontent.com/limbopro/Qure/master/IconSet/GlobalMedia.png
-static=🇺🇸 US, {{ getNodeNames(nodeList, usFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
-static=🇭🇰 HK, {{ getNodeNames(nodeList, hkFilter) }}, url = {{ proxyTestUrl }}, interval = 1200
-static=🐟 Final, DIRECT, REJECT, ♻️ 自动切换, 🚀 Proxy,  {{ getNodeNames(nodeList) }} img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Final.png
+available=🇺🇸 US, {{ getNodeNames(nodeList, usFilter) }}
+available=🇭🇰 HK, {{ getNodeNames(nodeList, hkFilter) }}
+static=🐟 Final, DIRECT, REJECT, ♻️ 自动切换, 🚀 Proxy,  {{ getNodeNames(nodeList) }},img-url=https://raw.githubusercontent.com/limbopro/Zure/master/IconSet/Final.png
 
 
 [server_local]

@@ -53,12 +53,12 @@ module.exports = {
     {
       name: 'surge_paolu_v4.conf',
       template: 'surge_v4',
-      provider: 'subscribe_paoluz',
+      provider: 'paolu_tojan',
     },
     {
       name: 'quan_x_paolu_v4.conf',
       template: 'quan_x',
-      provider: 'subscribe_paoluz',
+      provider: 'paolu_tojan',
     },
     {
       name: 'surge_v4.conf',
