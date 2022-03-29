@@ -7,3 +7,27 @@ DOMAIN-SUFFIX,sublink.online
 DOMAIN-SUFFIX,miaona.org
 DOMAIN-SUFFIX,bianyuan.xyz
 DOMAIN-KEYWORD,github
+
+
+#
+# Apple 其他自选
+
+# Others
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,itunes.com
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,apple
+DOMAIN,weather-analytics-events.apple.com
+
+# Apple News
+#
+USER-AGENT,AppleNews*
+DOMAIN-SUFFIX,apple.news
+DOMAIN,news-events.apple.com
+DOMAIN,news-edge.apple.com
+DOMAIN,apple.comscoreresearch.com
+
+# apple tv
+DOMAIN,daf.xp.apple.com
+DOMAIN-SUFFIX,tv.apple.com

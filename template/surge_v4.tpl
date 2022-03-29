@@ -58,8 +58,8 @@ show-error-page-for-reject = true
 🐟 Final = select, DIRECT, REJECT, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_proxy.list,🚀 Proxy // 个人维护代理
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_direct.list,DIRECT // 个人维护直连
+RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_proxy.list,🚀 Proxy // 个人维护代理
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/private.txt,DIRECT // 私有网络专用域名列表
 DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt,🛑 广告拦截 // 广告域名列表
 RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_api.list,🍎 Apple

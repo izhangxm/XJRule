@@ -37,34 +37,3 @@ DOMAIN-SUFFIX,apple-dns.net
 # OCSP
 DOMAIN-SUFFIX,ocsp.apple.com
 USER-AGENT,com.apple.trustd*
-
-#
-# Apple News
-#
-USER-AGENT,AppleNews*
-DOMAIN-SUFFIX,apple.news
-DOMAIN,news-events.apple.com
-DOMAIN,news-edge.apple.com
-DOMAIN,apple.comscoreresearch.com
-
-# apple tv
-DOMAIN,daf.xp.apple.com
-DOMAIN-SUFFIX,tv.apple.com
-
-#
-# Apple 其他自选
-#
-# iMessage
-DOMAIN-SUFFIX,ess.apple.com
-# Apple Music
-DOMAIN-SUFFIX,music.apple.com
-DOMAIN-SUFFIX,sonos-music.apple.com
-# Configuration
-DOMAIN,configuration.apple.com
-# Others
-DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,apple.co
-DOMAIN-SUFFIX,itunes.com
-DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN-SUFFIX,apple
-DOMAIN,weather-analytics-events.apple.com
