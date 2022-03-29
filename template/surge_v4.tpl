@@ -59,25 +59,25 @@ show-error-page-for-reject = true
 🐟 Final = select, DIRECT, REJECT, 🚀 Proxy, ♻️ 自动切换, 🇺🇸 US, 🇭🇰 HK
 
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_direct.list,DIRECT // 个人维护直连
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/xj_proxy.list,🚀 Proxy // 个人维护代理
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/private.txt,DIRECT // 私有网络专用域名列表
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/reject.txt,🛑 广告拦截 // 广告域名列表
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/apple_api.list,🍎 Apple
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/apple.txt,🍎 Apple CDN
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/icloud.txt,🍎 Apple iCloud
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/zoom.list,📞 Zoom
-RULE-SET,https://raw.githubusercontent.com/izhangxm/XJRule/main/rule-set/surge/steam.list,🎮 Steam
-RULE-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/telegramcidr.txt,✈️ Telegram
-RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Microsoft.list,Ⓜ️ 微软服务
-RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles/master/limbopro/Googleanalytics.list,🤖 谷歌分析
-RULE-SET,https://raw.githubusercontent.com/limbopro/Profiles4limbo/main/airports.list,👾 机场专线
-RULE-SET,https://raw.githubusercontent.com/geekdada/surge-list/master/youtube.list,📺 YouTube
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,📲 社交媒体
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,🎥 其他国外流媒体
-RULE-SET,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Video/Netflix.list,🎬 Netflix
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/gfw.txt ,🚀 Proxy  // GFWList域名列表
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/proxy.txt,🚀 Proxy // 收集的代理名单
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_direct.list,DIRECT // 个人维护直连
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_proxy.list,🚀 Proxy // 个人维护代理
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT // 私有网络专用域名列表
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/reject.txt,🛑 广告拦截 // 广告域名列表
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_api.list,🍎 Apple
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.txt,🍎 Apple CDN
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt,🍎 Apple iCloud
+RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt,✈️ Telegram
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/zoom.list,📞 Zoom
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/steam.list,🎮 Steam
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/youtube.list,📺 YouTube
+RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Microsoft.list,Ⓜ️ 微软服务
+RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Googleanalytics.list,🤖 谷歌分析
+RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles4limbo@main/airports.list,👾 机场专线
+RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/Global.list,📲 社交媒体
+RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Streaming.list,🎥 其他国外流媒体
+RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Video/Netflix.list,🎬 Netflix
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/gfw.txt ,🚀 Proxy  // GFWList域名列表
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt,🚀 Proxy // 收集的代理名单
 RULE-SET,SYSTEM,DIRECT
 RULE-SET,LAN,DIRECT
 GEOIP,CN,DIRECT
