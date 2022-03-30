@@ -23,6 +23,8 @@ show-error-page-for-reject = true
 test-timeout = 3
 http-api-web-dashboard = true
 http-api = zaqqwe@127.0.0.1:6171
+exclude-simple-hostnames = true
+always-real-ip = *
 
 [Proxy]
 {{ getSurgeNodes(nodeList) }}
