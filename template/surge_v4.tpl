@@ -6,16 +6,18 @@ loglevel = notify
 # 版本中，如果启用了 Set as System Proxy,  那么这些值会被写入到系统网络代理
 # 设置中.)
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 100.84.0.0/10, localhost, *.local
+exclude-simple-hostnames = true
+
 # 强制使用特定的 DNS 服务器
-dns-server = system, 119.29.29.29, 223.5.5.5, 1.1.1.1
+dns-server = 119.29.29.29, 223.5.5.5, 1.1.1.1, system
 # 将特定 IP 段跳过 Surge TUN，详见 Manual
 tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
 # 是否启动完整的 IPv6 支持 (默认值: false)
 ipv6 = true
 # 以下参数仅供 macOS 版本使用（多端口监听仅 Surge 3 支持）
 # 测速地址
-internet-test-url = http://cp.cloudflare.com/generate_204
-proxy-test-url = http://cp.cloudflare.com/generate_204
+internet-test-url = http://www.gstatic.com/generate_204
+proxy-test-url =http://www.gstatic.com/generate_204
 # 其它
 external-controller-access = zaqqwe@0.0.0.0:6170
 allow-wifi-access = true
@@ -23,8 +25,7 @@ show-error-page-for-reject = true
 test-timeout = 3
 http-api-web-dashboard = true
 http-api = zaqqwe@127.0.0.1:6171
-exclude-simple-hostnames = true
-always-real-ip = *
+
 
 [Proxy]
 {{ getSurgeNodes(nodeList) }}
