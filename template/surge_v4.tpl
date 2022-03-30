@@ -56,7 +56,7 @@ Final = select, DIRECT, REJECT, Proxy, Auto, US, HK
 RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_direct.list,DIRECT,update-interval={{ customParams.resource_inv }}  // 个人维护直连
 RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_proxy.list,Proxy,update-interval={{ customParams.resource_inv }} // 个人维护代理
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT,update-interval={{ customParams.resource_inv }}  // 私有网络专用域名列表
-DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-surge2.txt,AdReject,update-interval={{ customParams.resource_inv }}  // 广告域名列表
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-surge2.txt,AdReject,update-interval={{ customParams.resource_inv }}  // 广告域名列表，误杀的请在模块内添加直连
 RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_api.list,Apple 账号,update-interval={{ customParams.resource_inv }} // AppleAPI所在区域，代理尽量选择所在区
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.txt,Apple CDN,update-interval={{ customParams.resource_inv }} // Apple可以直接链接的资源
 RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_cdn.list,Apple CDN,update-interval={{ customParams.resource_inv }} // Apple可以直接链接的资源
@@ -71,11 +71,9 @@ RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles@master/limbopro/Googleana
 RULE-SET,https://cdn.jsdelivr.net/gh/limbopro/Profiles4limbo@main/airports.list,机场专线,update-interval={{ customParams.resource_inv }}  // 各种机场的地址
 RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Video/Netflix.list,Netflix,update-interval={{ customParams.resource_inv }}  // Netflix
 RULE-SET,https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Surge/Ruleset/StreamingMedia/Streaming.list,其他国外流媒体,update-interval={{ customParams.resource_inv }} // 国外流媒体 
+DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/tld-not-cn.txt ,Proxy,update-interval={{ customParams.resource_inv }}   // 非中国大陆使用的顶级域名列表
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/gfw.txt ,Proxy,update-interval={{ customParams.resource_inv }}   // GFWList域名列表
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/proxy.txt,Proxy,update-interval={{ customParams.resource_inv }}  // 收集的代理名单
-RULE-SET,SYSTEM,DIRECT
-RULE-SET,LAN,DIRECT
-GEOIP,CN,DIRECT
 FINAL,Final
 
 [URL Rewrite]
