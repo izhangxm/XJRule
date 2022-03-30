@@ -31,9 +31,9 @@ http-api = zaqqwe@127.0.0.1:6171
 {{ getSurgeNodes(nodeList) }}
 
 [Proxy Group]
-Auto = url-test, {{ getNodeNames(nodeList) }}, url = {{ proxyTestUrl }}, interval = {{ customParams.test_inv }}
-US = url-test, {{ getNodeNames(nodeList, usFilter) }}, url = {{ proxyTestUrl }}, interval = {{ customParams.test_inv }}
-HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, url = {{ proxyTestUrl }}, interval = {{ customParams.test_inv }}
+Auto = url-test, {{ getNodeNames(nodeList) }}, interval = {{ customParams.test_inv }}
+US = url-test, {{ getNodeNames(nodeList, usFilter) }}, interval = {{ customParams.test_inv }}
+HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, interval = {{ customParams.test_inv }}
 Proxy = select, Auto, US, HK, {{ getNodeNames(nodeList) }}
 AdReject = select, REJECT, DIRECT, Auto
 Apple 账号 = select, DIRECT, Proxy, US, HK
