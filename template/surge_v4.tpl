@@ -58,8 +58,8 @@ RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/xj_prox
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/private.txt,DIRECT,update-interval={{ customParams.resource_inv }}  // 私有网络专用域名列表
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/privacy-protection-tools/anti-AD@master/anti-ad-surge2.txt,AdReject,update-interval={{ customParams.resource_inv }}  // 广告域名列表，误杀的请在模块内添加直连
 RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_api.list,Apple 账号,update-interval={{ customParams.resource_inv }} // AppleAPI所在区域，代理尽量选择所在区
+RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_cdn.list,Apple CDN,update-interval={{ customParams.resource_inv }} // Apple可以直接链接的资源(个人维护)
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/apple.txt,Apple CDN,update-interval={{ customParams.resource_inv }} // Apple可以直接链接的资源
-RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_cdn.list,Apple CDN,update-interval={{ customParams.resource_inv }} // Apple可以直接链接的资源
 RULE-SET,https://cdn.jsdelivr.net/gh/izhangxm/XJRule@main/rule-set/surge/apple_apps.list,Apple 国外应用,update-interval={{ customParams.resource_inv }} // 如AppleTV等在国内无法使用的应用
 DOMAIN-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/icloud.txt,Apple iCloud,update-interval={{ customParams.resource_inv }} // iCloud服务一般选择直接链接就可以
 RULE-SET,https://cdn.jsdelivr.net/gh/Loyalsoldier/surge-rules@release/ruleset/telegramcidr.txt,Telegram,update-interval={{ customParams.resource_inv }} // Telegram
