@@ -43,6 +43,8 @@ module.exports = {
   ],
   customFilters: {
     hktFilter: utils.useKeywords(['hkt', 'HKT']),
+    AutoFilter: utils.discardKeywords(['台湾']),
+    jpFilter: utils.useKeywords(['日本','JP']),
   },
   customParams: {
     conf_inv: 3600,

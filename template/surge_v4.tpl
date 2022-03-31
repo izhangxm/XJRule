@@ -32,9 +32,11 @@ http-api = zaqqwe@127.0.0.1:6171
 
 [Proxy Group]
 Auto = url-test, {{ getNodeNames(nodeList) }}, interval = {{ customParams.test_inv }}
+AutoFiltered = url-test, {{ getNodeNames(nodeList, customFilters.AutoFilter) }}, interval = {{ customParams.test_inv }}
 US = url-test, {{ getNodeNames(nodeList, usFilter) }}, interval = {{ customParams.test_inv }}
 HK = url-test, {{ getNodeNames(nodeList, hkFilter) }}, interval = {{ customParams.test_inv }}
-Proxy = select, Auto, US, HK, {{ getNodeNames(nodeList) }}
+JP = url-test, {{ getNodeNames(nodeList, customFilters.jpFilter) }}, interval = {{ customParams.test_inv }}
+Proxy = select, AutoFiltered, Auto, US, HK, JP, {{ getNodeNames(nodeList) }}
 AdReject = select, REJECT, DIRECT, Auto
 Apple 账号 = select, DIRECT, Proxy, US, HK
 Apple 国外应用 = select, Proxy, Auto, Apple 账号, HK, US, DIRECT
