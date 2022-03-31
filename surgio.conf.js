@@ -47,7 +47,7 @@ module.exports = {
     jpFilter: utils.useKeywords(['日本','JP']),
   },
   customParams: {
-    conf_inv: 3600,
+    conf_inv: 3600 * 24,
     resource_inv: 3600,
     test_inv: 600,
   },
