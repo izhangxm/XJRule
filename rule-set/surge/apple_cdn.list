@@ -33,3 +33,5 @@ DOMAIN,configuration.apple.com
 DOMAIN,captive.apple.com
 DOMAIN,smp-device-content.apple.com
 DOMAIN,api.smoot.apple.cn
+USER-AGENT,*WeatherFoundation*,DIRECT
+DOMAIN,weather-data.apple.com,DIRECT
