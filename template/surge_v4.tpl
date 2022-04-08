@@ -9,7 +9,7 @@ skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10
 exclude-simple-hostnames = true
 
 # 强制使用特定的 DNS 服务器
-dns-server = system, 119.29.29.29, 223.5.5.5, 1.1.1.1
+dns-server = system, 223.5.5.5, 180.76.76.76
 # 将特定 IP 段跳过 Surge TUN，详见 Manual
 tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
 # 是否启动完整的 IPv6 支持 (默认值: false)
